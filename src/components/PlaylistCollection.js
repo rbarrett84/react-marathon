@@ -14,4 +14,27 @@ class PlaylistCollection extends React.Component{
         className = "selected"
       }
     })
+
+    let playlistClick = () => {
+        this.props.handlePlaylistSelect(list.id)
+      }
+
+    return(
+        <Playlist
+          key={list.id}
+          name={list.name}
+          songs={list.songs}
+          className={className}
+          onClick={playlistClick}
+        />
+      )
+    return(
+        <ul>
+          { playlists }
+        </ul>
+      )
+    }
   }
+
+
+export default PlaylistCollection;
