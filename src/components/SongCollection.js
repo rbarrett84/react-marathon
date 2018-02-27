@@ -9,22 +9,22 @@ class SongCollection extends React.Component {
     }
   }
   render() {
-    let songs = this.props.songs.map((singleSong) => {
+    let songs = this.props.songs.map((oneSong) => {
       let className;
-      if (singleSong.id === this.props.selectedSongId) {
+      if (oneSong.id === this.props.selectedSongId) {
         className = 'selected'
       }
       let handleSelected = () =>{
-        this.props.handleSongSelect(singleSong.id);
+        this.props.handleSongSelect(oneSong.id);
       }
 
       return (
         <Song
-          key={singleSong.id}
-          id={singleSong.id}
-          album={singleSong.album}
-          artist={singleSong.artist}
-          name={singleSong.name}
+          key={oneSong.id}
+          id={oneSong.id}
+          album={oneSong.album}
+          artist={oneSong.artist}
+          name={oneSong.name}
           className={className}
           handleSelected={handleSelected}
 
